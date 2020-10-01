@@ -1,0 +1,83 @@
+
+ <div class="home_display" fxLayout="column" fxLayoutGap="120px" >
+   <div fxFlex="20">
+    <mat-toolbar class="toolbar_color">
+      <!-- <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div> -->
+      
+        <span>JEEwrapper</span>
+        <span class="example-spacer"></span>
+        <a href="" class="toolbar_element">Home</a>
+        <a href=""  class="toolbar_element">About</a>
+        <a href=""  class="toolbar_element">Courses</a>
+        <a href=""  class="toolbar_element">Contacts</a>
+    </mat-toolbar>
+   </div>
+    
+ </div>
+ <div  fxLayout="row"  fxLayout.xs = "column"class="see_courses" style="padding-left: 7%;padding-right: 7%;">
+     
+  <div fxFlex="25"  style="padding:1%">
+    <mat-card  class="courses" >
+      <div  class="module-border-wrap">
+        <div class="study_material" >Study Material</div>
+      </div>
+      <mat-list role="list">
+        <mat-list-item role="listitem"  class="courses_class" (click)="eleventhSubjects=true" (click)="tweSubjects=false">Class 11</mat-list-item>
+      </mat-list>
+      <mat-list  *ngIf="eleventhSubjects==true" role="list" style="background: linear-gradient(to right, rgba(220, 20, 60, 0.404), white);">
+        <mat-list-item role="listitem"  class="eleventh_sub">Physics</mat-list-item>
+        <mat-list-item role="listitem"  class="eleventh_sub">Chemistry</mat-list-item>
+        <mat-list-item role="listitem"  class="eleventh_sub">maths</mat-list-item>
+      </mat-list>
+      <mat-list role="list"  >
+        <mat-list-item role="listitem" class="courses_class" (click)="tweSubjects=true" (click)="eleventhSubjects=false">Class 12</mat-list-item>
+      </mat-list>
+      <mat-list *ngIf="tweSubjects==true" role="list"  style="background: linear-gradient(to right, rgba(220, 20, 60, 0.301), white);">
+        <mat-list-item role="listitem"  class="eleventh_sub">Physics</mat-list-item>
+        <mat-list-item role="listitem"  class="eleventh_sub">Chemistry</mat-list-item>
+        <mat-list-item role="listitem"  class="eleventh_sub">maths</mat-list-item>
+      </mat-list>
+    </mat-card> 
+  </div>
+  <div fxFlex="25" style="padding:1%">
+    <mat-card class="courses">
+      <div  class="module-border-wrap">
+        <div class="study_material" >Exams Papers</div>
+      </div>
+      <mat-list role="list">
+        <mat-list-item role="listitem"  class="courses_class" >Class 11</mat-list-item>
+        <mat-list-item role="listitem"  class="courses_class" >Class 12</mat-list-item>
+      </mat-list>
+    </mat-card>
+  </div>
+  <div fxFlex="25" style="padding:1%">
+    <mat-card class="courses">
+      <div  class="module-border-wrap">
+        <div class="study_material" >Formulas</div>
+      </div>
+      <mat-list role="list">
+        <mat-list-item role="listitem"  class="courses_class" >Class 11</mat-list-item>
+        <mat-list-item role="listitem"  class="courses_class" >Class 12</mat-list-item>
+      </mat-list>
+    </mat-card>
+  </div>
+  <div fxFlex="25" style="padding:1%">
+    <mat-card class="courses" fxLayout="column" >
+      <div  fxFlex="40"class="module-border-wrap">
+        <div class="study_material" >Mock Test</div>
+      </div>
+      <br>
+      <br>
+      <div fxFlex="40"  fxLayoutAlign="center start">
+        <button fxFlex="50" mat-raised-button class="test_button">Start Test</button>
+      </div>
+      <br> 
+    </mat-card>
+  </div>
+ </div>
+ 
+ 
